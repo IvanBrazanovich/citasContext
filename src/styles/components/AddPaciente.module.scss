@@ -1,0 +1,63 @@
+@use "../index" as *;
+
+.addPaciente {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.addPaciente__textContainer {
+  text-align: center;
+
+  & h2 {
+    font-weight: 900;
+  }
+
+  & p {
+    font-weight: 700;
+  }
+}
+
+.textContainer__spanColor {
+  color: $primaryColor;
+}
+
+.formContainer__form {
+  margin: 2rem 0;
+  background-color: white;
+  padding: 2rem 1rem;
+  border-radius: 0.2rem;
+
+  & button {
+    display: block;
+    color: white;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: $primaryColor;
+    padding: 0.5rem;
+  }
+}
+
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+
+  & label {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  & input,
+  textarea {
+    padding: 0.7rem 2rem;
+    border-radius: 4px;
+    border: none;
+    // border: 1px solid $grayColor;
+    box-shadow: 0 0 1px 2px $grayColor;
+    &::placeholder {
+      color: $grayColorStrong;
+    }
+  }
+}
