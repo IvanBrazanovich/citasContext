@@ -6,6 +6,15 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
+}
+
+
+model Cita {
+  id Int @id @default(autoincrement())
+  mascota String
+  propietario String
+  alta String
+  sintomas String
 }
