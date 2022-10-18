@@ -16,5 +16,6 @@ model Cita {
   mascota String
   propietario String
   alta String
+  email String
   sintomas String
 }

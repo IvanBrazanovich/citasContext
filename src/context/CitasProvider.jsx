@@ -1,5 +1,7 @@
 import { createContext, useState } from "react";
+import { PrismaClient } from "@prisma/client";
 
+const prisma = new PrismaClient();
 const CitasContext = createContext();
 
 const CitasProvider = ({ children }) => {
@@ -48,7 +50,27 @@ const CitasProvider = ({ children }) => {
     data.id = id;
 
     setCitas([...citas, data]);
+
+    //Add to database
+    addDatabase(data);
+    2;
   };
+
+  const addDatabase = async (citaArr) => {
+    const { mascota, propietario, alta, email, sintomas } = citaArr;
+    const cita = await prisma.cita.create({
+      data: {
+        mascota,
+        propietario,
+        alta,
+        sintomas,
+        email,
+      },
+    });
+    const res = await cita.json();
+    console.log(res);
+  };
+
   return (
     <CitasContext.Provider
       value={{ data, handleChange, submitForm, error, citas }}
