@@ -4,7 +4,7 @@ import Form from "./Form";
 
 const AddPaciente = () => {
   return (
-    <aside className={styles.addPaciente}>
+    <section className={styles.addPaciente}>
       <div className={styles.addPaciente__textContainer}>
         <h2>Seguimiento de Pacientes</h2>
         <p>
@@ -16,7 +16,7 @@ const AddPaciente = () => {
       <div className={styles.addPaciente__formContainer}>
         <Form />
       </div>
-    </aside>
+    </section>
   );
 };
 
