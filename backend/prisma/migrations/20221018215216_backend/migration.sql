@@ -4,6 +4,7 @@ CREATE TABLE `Cita` (
     `mascota` VARCHAR(191) NOT NULL,
     `propietario` VARCHAR(191) NOT NULL,
     `alta` VARCHAR(191) NOT NULL,
+    `email` VARCHAR(191) NOT NULL,
     `sintomas` VARCHAR(191) NOT NULL,
 
     PRIMARY KEY (`id`)

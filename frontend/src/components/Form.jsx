@@ -9,6 +9,7 @@ const Form = () => {
     handleChange,
     submitForm,
     error,
+    editCita,
   } = useContext(CitasContext);
 
   return (
@@ -74,7 +75,9 @@ const Form = () => {
         />
       </div>
 
-      <button type="submit">Agregar Paciente</button>
+      <button type="submit">
+        {editCita ? "Editar Cita" : "Agregar Paciente"}
+      </button>
     </form>
   );
 };
